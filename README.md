@@ -1,125 +1,128 @@
-# 📦 HomeHunt Backend
+# HomeHunt Frontend
 
-This is the **backend server** for the **HomeHunt** project — a full-stack rental housing solution.  
-Built with **Node.js**, **Express**, **TypeScript**, **MongoDB**, and **Mongoose**.
+Welcome to **HomeHunt** – a modern rental housing solution platform!  
+This is the **frontend** application built with **Next.js 15**, **TypeScript**, **TailwindCSS**, and **Server Actions**.
 
 ---
 
 ## 🚀 Features
 
-- Authentication and Authorization (JWT)
-- Role-based access control (Admin, Landlord, Tenant)
-- Product (Rental Listing) Management
-- Shop/Property Owner based restrictions
-- Filtering, searching, and pagination
-- Secure API endpoints
-- Environment-based configuration
-- Clean and scalable folder structure
+- ⚡ Fully typed with **TypeScript**
+- 🏠 Fetch, display, and manage **housing products**
+- 🔥 Optimized with **Next.js Server Actions** and **Dynamic Cache Revalidation**
+- 🎨 Responsive and modern **TailwindCSS** design
+- 🔐 Supports **Role-Based Access** via JWT (Landlord, Tenant, Admin)
+- 🧹 Organized with clean folder structure and scalable codebase
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Node.js
-- Express.js
-- TypeScript
-- MongoDB + Mongoose
-- Zod (for validation)
-- bcryptjs (for hashing passwords)
-- jsonwebtoken (JWT Auth)
-- dotenv
-- cors
+- **Next.js 15**
+- **TypeScript**
+- **TailwindCSS**
+- **React Hook Form** (for forms)
+- **Next Auth (Custom Authentication)** (optional if you add auth later)
+- **Server Actions** (for form submissions / data fetching)
+- **Vercel Deployment**
 
 ---
 
-## 📂 Project Structure
+## 📦 Installation
 
-```
-src/
-│
-├── app/            # Route handlers
-├── modules/        # Features (users, products, bookings, etc.)
-├── middlewares/    # Error handling, authentication, validation
-├── utils/          # Utility functions
-├── constants/      # Static values like status codes
-├── config/         # Database and server config
-├── server.ts       # App entry point
-│
-.env                # Environment variables
-package.json
-tsconfig.json
-```
+1. **Clone the repository**:
+
+   ```bash
+  https://github.com/HasibulIslam007/homehunt_server.git
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Setup environment variables**:
+
+   Create a `.env.local` file at the root and add:
+
+ 
+
+4. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+   
 
 ---
 
-## ⚙️ Getting Started
+## 🏗️ Project Structure
 
-### 1. Clone the repository
-
-```bash
-[git clone https://github.com/your-username/homehunt-backend.git]
+```
+/app
+  /components
+  /hooks
+  /services
+  /(WithCommonLayout)
+    /(home)
+      page.tsx
+/lib
+  verifyToken.ts
+/public
+/styles
+.env.local
 ```
 
-### 2. Install dependencies
+- `app/`: Next.js 15 App Router based structure
+- `lib/`: Utility functions (e.g., token handling)
+- `services/`: API calls (`getAllProducts`, `getSingleProduct`, etc.)
+- `(WithCommonLayout)/(home)/`: Home page that fetches and lists products
 
-```bash
-npm install
-```
+---
 
-or
-
-```bash
-yarn
-```
-
-### 3. Configure environment variables
-
-Create a `.env` file in the root directory and add the following:
-
-```env
-PORT=5000
-DATABASE_URL=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRES_IN=1d
-```
-
-### 4. Run the server
-
-#### For development (with nodemon)
-
-```bash
-npm run dev
-```
-
-#### For production
+## 🧹 Build for Production
 
 ```bash
 npm run build
-npm start
+npm run start
 ```
 
----
-
-
-> Full API Documentation coming soon!
+Make sure your API server is live and your environment variables are properly set.
 
 ---
 
-## 🧑‍💻 Contributing
+## 🐞 Common Issues
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.  
-Make sure to update tests as appropriate.
+- **API Not Found (404)**:
+  - Check your `NEXT_PUBLIC_BASE_API` in `.env.local`
+  - It should point to your `/api/v1` backend route.
+- **Prerender Errors**:
+  - Ensure your backend always returns valid JSON (not HTML error pages).
+- **Deployment**:
+  - Set correct environment variables on Vercel during deployment.
+
+---
+
+## ✨ Contributing
+
+PRs are welcome! Let's build a better rental housing experience together!
 
 ---
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
 
 ---
 
-## ❤️ Acknowledgements
+## 🙌 Special Thanks
 
-- Thanks to the **HomeHunt** team and contributors.
-- Inspired by modern real-estate platforms.
+- [Next.js](https://nextjs.org/)
+- [Vercel](https://vercel.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+
+---
+
+# 🏡 Happy HomeHunting!
 
